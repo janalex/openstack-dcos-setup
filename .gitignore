@@ -1,0 +1,10 @@
+.dcos
+
+terraform.tfvars
+terraform.tfstate
+terraform.tfstate.backup
+.terraform
+.terraform.tfstate.swp
+
+dcos.openstack.tf
+dcos.tf
