@@ -9,9 +9,9 @@ module "dcos-openstack" {
     openstack_tenant_name = "<CHANGE-ME>"
 
     # SSH User
-    openstack_ssh_user = "<CHANGE-ME>"
+    openstack_ssh_user = "core"
     # SSH Key Name
-    openstack_key_name = "<CHANGE-ME>"
+    openstack_key_name = "dcos-key"
     # SSH Public Key to make authorized key for all nodes in the DCOS cluster
     openstack_public_key = "<CHANGE-ME>"
     # Path & filename of the SSH private key
@@ -21,26 +21,27 @@ module "dcos-openstack" {
     num_slaves = "3"
 
     # URI of Keystone authentication agent
-    openstack_keystone_uri = "<CHANGE-ME>"
+    openstack_keystone_uri = "https://region-a.geo-1.identity.hpcloudsvc.com:35357/v2.0/"
 
     # Instance flavors for Mesos master and slave VMs
-    openstack_instance_type_master = "<CHANGE-ME>"
-    openstack_instance_type_slave = "<CHANGE-ME>"
+    openstack_instance_type_master = "standard.small"
+    openstack_instance_type_slave = "standard.medium"
 
     # The internet facing network which Neutron L3 routers should use as a gateway
-    openstack_neutron_router_gateway_network_id = "<CHANGE-ME>"
+    openstack_neutron_router_gateway_network_id = "122c72de-0924-4b9f-8cf3-b18d5d3d292c"
 
     # The name of the pool that floating IP addresses will be requested from
-    openstack_floating_ip_pool_name = "public"
+    openstack_floating_ip_pool_name = "Ext-Net"
 
     # The name of the Openstack Glance image used to spin up all VM instances.
-    openstack_image = "<CHANGE-ME>"
+    openstack_image = "CoreOS"
 
     # URL to download DCOS tarball from - you need to get this from Mesosphere
     dcos_download_url = "<CHANGE-ME>"
 
-    # Openstack Region (Blank default for 'no region' installations)
-    # openstack_region = "<CHANGE-ME>"
+    # Openstack Region (Blank default for 'no region' installations) - set to US West here
+    # Change to region-b.geo-1 for US East
+    openstack_region = "region-a.geo-1"
 }
 
 output "dcos_target" {

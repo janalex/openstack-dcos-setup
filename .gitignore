@@ -7,4 +7,5 @@ terraform.tfstate.backup
 .terraform.tfstate.swp
 
 dcos.openstack.tf
+dcos.hpcloud.tf
 dcos.tf

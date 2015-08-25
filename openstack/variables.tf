@@ -41,6 +41,16 @@ variable "openstack_subnet_cidr_block" {
     default = "10.0.1.0/24"
 }
 
+variable "openstack_subnet_ip_prefix" {
+    description = "Subnet IP address prefix"
+    default = "10.0.1"
+}
+
+variable "openstack_subnet_master_ip_suffix" {
+    description = "DCOS Master node ip address within the subnet prefix"
+    default = "10"
+}
+
 variable "openstack_neutron_router_gateway_network_id" {
     description = "The UUID of the network that will be used as WAN breakout for the neutron L3 Router"
 }
