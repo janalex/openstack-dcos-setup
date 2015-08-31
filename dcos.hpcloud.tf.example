@@ -14,7 +14,9 @@ module "dcos-openstack" {
     openstack_key_name = "dcos-key"
     # SSH Public Key to make authorized key for all nodes in the DCOS cluster
     openstack_public_key = "<CHANGE-ME>"
-    # Path & filename of the SSH private key
+    # Path & filename of the SSH private key.  Note that the SSH private key should not be password-protected.
+    # If necessary, create a new key with ssh-keygen and make sure the private key file and the public key file 
+    # contents (which should be pasted in the previous entry) match up.
     openstack_ssh_private_key_file = "<CHANGE-ME>"
 
     # Number of Mesos slaves to instantiate
