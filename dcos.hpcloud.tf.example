@@ -10,7 +10,7 @@ module "dcos-openstack" {
 
     # SSH User
     openstack_ssh_user = "core"
-    # SSH Key Name
+    # SSH Key Name (this will be a new key name - do not reuse an existing key name)
     openstack_key_name = "dcos-key"
     # SSH Public Key to make authorized key for all nodes in the DCOS cluster
     openstack_public_key = "<CHANGE-ME>"
@@ -24,11 +24,12 @@ module "dcos-openstack" {
     openstack_keystone_uri = "https://region-a.geo-1.identity.hpcloudsvc.com:35357/v2.0/"
 
     # Instance flavors for Mesos master and slave VMs
-    openstack_instance_type_master = "standard.small"
+    openstack_instance_type_master = "standard.medium"
     openstack_instance_type_slave = "standard.medium"
 
-    # The internet facing network which Neutron L3 routers should use as a gateway
-    openstack_neutron_router_gateway_network_id = "122c72de-0924-4b9f-8cf3-b18d5d3d292c"
+    # The internet facing network which Neutron L3 routers should use as a gateway.  On hpcloud, this is typically 
+    # called Ext-Net.  neutron net-list |grep Ext-Net  should provide the ID for this network.
+    openstack_neutron_router_gateway_network_id = "7da74520-9d5e-427b-a508-213c84e69616"
 
     # The name of the pool that floating IP addresses will be requested from
     openstack_floating_ip_pool_name = "Ext-Net"
