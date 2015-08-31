@@ -93,6 +93,11 @@ variable "dcos_download_url" {
     default = ""
 }
 
+variable "dcos_repository_url" {
+    description = "DCOS repository base URL"
+    default = ""
+}
+
 variable "local_dcos_tar_path" {
     description = "Path to the DCOS bootstrap tar, to deploy to your cluster. If not provided, then by default, the provisioner will download the latest DCOS tar to a .dcos directory within your module path"
     default=".dcos/bootstrap.tar.xz"

@@ -21,7 +21,7 @@ write_files:
     permissions: 0644
     owner: root
     content: |
-      file:///tmp
+      ${repository_url}
 
   - path: /etc/mesosphere/roles/slave
 

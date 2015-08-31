@@ -83,6 +83,7 @@ resource "template_file" "cloud-init-master" {
     vars {
         dns_fallback = "${var.dns_fallback}"
         cluster_name = "${var.dcos_cluster_name}"
+        repository_url = "${var.dcos_respository_url}"
     }
 }
 
@@ -156,6 +157,7 @@ resource "template_file" "cloud-init-slave" {
 
     vars {
         dns_fallback = "${var.dns_fallback}"
+        repository_url = "${var.dcos_respository_url}"
     }
 }
 

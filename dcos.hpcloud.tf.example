@@ -39,6 +39,9 @@ module "dcos-openstack" {
     # URL to download DCOS tarball from - you need to get this from Mesosphere
     dcos_download_url = "<CHANGE-ME>"
 
+    # DCOS repository base URL - you need to get this from Mesosphere
+    dcos_repository_url = "<CHANGE-ME>"
+
     # Openstack Region (Blank default for 'no region' installations) - set to US West here
     # Change to region-b.geo-1 for US East
     openstack_region = "region-a.geo-1"
