@@ -15,7 +15,8 @@ This repository contains code and instructions for the Terraform module that all
 
 1. Clone this repo.
 1. Create a new top-level terraform file by copying the example provided (dcos.openstack.tf.example) and filling in your specific information for the appropriate variables.
-1. Execute terraform apply from the top-level directory of this repo
+1. Run `terraform get` from the top-level directory to setup the terraform workspace
+1. Execute `terraform apply` from the top-level directory of this repo
 1. If everything goes well, the URL of the DCOS dashboard should be reported from the terraform execution.
 
 ## License
